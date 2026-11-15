@@ -1,0 +1,288 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #d9f5df, #fff4bd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.container {
+    background: white;
+    width: 650px;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(70,120,70,0.15);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #45865c;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #999;
+}
+
+.stats {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    flex: 1;
+    background: #eff9ee;
+    padding: 15px 5px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.stat-box h2 {
+    color: #45865c;
+    font-size: 25px;
+}
+
+.stat-box p {
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.stat-box:nth-child(2) {
+    background: #fff8d9;
+}
+
+.stat-box:nth-child(3) {
+    background: #f0f5e5;
+}
+
+.progress-section {
+    margin-bottom: 25px;
+    color: #45865c;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #edf1e7;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: #8bc995;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+#progressText {
+    text-align: right;
+    font-size: 12px;
+}
+
+h3 {
+    color: #45865c;
+    margin: 20px 0 12px;
+}
+
+.input-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 12px;
+    border: 2px solid #c5e8c8;
+    border-radius: 9px;
+    outline: none;
+    min-width: 0;
+}
+
+#taskInput {
+    flex: 1 1 150px;
+}
+
+input:focus, select:focus {
+    border-color: #79bd85;
+}
+
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#addBtn {
+    background: #f8df79;
+    color: #526b35;
+}
+
+#addBtn:hover {
+    background: #efd15a;
+}
+
+#searchInput {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.filters button {
+    background: #eff9ee;
+    color: #45865c;
+}
+
+.filters button.active {
+    background: #8bc995;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #eff9ee;
+    border-left: 5px solid #8bc995;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-text {
+    color: #444;
+    overflow-wrap: anywhere;
+}
+
+.task-date {
+    color: #999;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.completed {
+    background: #fff9db;
+    border-left-color: #e9cf60;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.priority {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.high {
+    color: #e05d5d;
+}
+
+.medium {
+    color: #d39b26;
+}
+
+.low {
+    color: #429b65;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.done-btn {
+    background: #8bc995;
+    color: white;
+}
+
+.edit-btn {
+    background: #f8df79;
+    color: #665522;
+}
+
+.delete-btn {
+    background: #f5a69b;
+    color: white;
+}
+
+.clear-btn {
+    width: 100%;
+    background: #f5a69b;
+    color: white;
+    margin-top: 15px;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #aaa;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    color: #6a9c71;
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+@media(max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+
+    .stats {
+        gap: 6px;
+    }
+
+    .stat-box p {
+        font-size: 10px;
+    }
+
+    li {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .actions {
+        width: 100%;
+    }
+}
